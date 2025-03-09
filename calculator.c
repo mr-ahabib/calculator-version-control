@@ -7,6 +7,11 @@ void divide(float a, float b) {
     if (b != 0) printf("Result: %.2f\n", a / b);
     else printf("Error: Division by zero!\n");
 }
+void modulus(int a, int b) {
+    if (b != 0) printf("Result: %d\n", a % b);
+    else printf("Error: Modulus by zero!\n");
+}
+
 
 int main() {
     int choice;
@@ -25,10 +30,11 @@ int main() {
             case 2: subtract(num1, num2); break;
             case 3: multiply(num1, num2); break;
             case 4: divide(num1, num2); break;
-            case 5: printf("Exiting...\n"); break;
+            case 5: modulus(num1, num2); break;
+            case 6: printf("Exiting...\n"); break;
             default: printf("Invalid choice!\n");
         }
-    } while (choice != 5);
+    } while (choice != 6);
 
     return 0;
 }
